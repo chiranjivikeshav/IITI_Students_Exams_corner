@@ -1,15 +1,21 @@
-import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/home';
-import AuthPage from './components/auth';
+import HomePage from './components/home/home';
+import AuthPage from './components/auth/auth';
+import MyNavbar from './components/navbar/navbar';
 function App() {
   return (
-    <Router>
+    
+    <div>
+      <MyNavbar/>
+
+     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />
       </Routes>
     </Router>
+    </div>
+  
   );
 }
 
